@@ -1,19 +1,22 @@
-# vpndnsutils
+# Description
 Developed for update resolv.conf link when connected to pritunl vpn client
 
-# for build [from git root directory]
+# Building package [from git root directory]
 sudo dpkg-deb --build vpndnsutils
 
-# check service status
+# Installing package
+sudo apt install -f ./vpndnsutils.deb -y
+
+# Checking service status
 sudo systemctl status vpndnsutils.service
 
-# stop service
+# Stopping service
 sudo systemctl stop vpndnsutils.service
 
-# start service
+# Starting service
 sudo systemctl start vpndnsutils.service
 
-# restart service
+# Restarting service
 sudo systemctl restart vpndnsutils.service
 
 # config file
@@ -21,3 +24,9 @@ sudo systemctl restart vpndnsutils.service
 
 # exec file
 /opt/vpndnsutils/listener.sh
+
+# Removing service
+sudo dpkg --remove vpndnsutils
+
+# Notes
+The service will start automatically after operational system boot
