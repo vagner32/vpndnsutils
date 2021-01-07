@@ -1,0 +1,10 @@
+[Unit]
+Description=Service designed for adjust dns when connected to Pritunl
+
+[Service]
+ExecStart=/bin/bash /opt/vpndnsutils/listener.sh
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
