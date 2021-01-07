@@ -10,3 +10,4 @@ if  [[ "$CURRENT_LINK_TARGET" == "$VPN_FILE" ]]; then
   rm $SLINK
   ln -s $ORIGINAL_FILE $SLINK
 fi
+rm -rf $VPN_FILE

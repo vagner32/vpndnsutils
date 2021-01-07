@@ -20,6 +20,7 @@ echo -n -e "${BOLD}${PURPLE}Please enter your PRD DNS Server address? ${CYAN}[e.
 read ip
 sed -i "s/prdip/$ip/g" /etc/vpndnsutils.conf
 
+sleep 5
 systemctl start vpndnsutils
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}Service started successfuly.${NONE}"
