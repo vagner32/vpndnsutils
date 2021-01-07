@@ -1,0 +1,12 @@
+#!/bin/bash
+sudo systemctl daemon-reload
+
+VPN_FILE=/etc/resolv.conf.vpn
+ORIGINAL_FILE=/run/resolvconf/resolv.conf
+SLINK=/etc/resolv.conf
+
+CURRENT_LINK_TARGET=`readlink -f /etc/resolv.conf`
+if  [[ "$CURRENT_LINK_TARGET" == "$VPN_FILE" ]]; then
+  rm $SLINK
+  ln -s $ORIGINAL_FILE $SLINK
+fi
