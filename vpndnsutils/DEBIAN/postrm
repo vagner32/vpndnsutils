@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo systemctl daemon-reload
+systemctl daemon-reload
 
 VPN_FILE=/etc/resolv.conf.vpn
 ORIGINAL_FILE=/run/resolvconf/resolv.conf

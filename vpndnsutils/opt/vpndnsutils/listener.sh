@@ -8,7 +8,6 @@ inotifywait -m /tmp/pritunl/ -e create -e delete |
 	echo nameserver  `grep prd /etc/vpndnsutils.conf |awk '{print $3}'` >> $VPN_FILE
 	echo nameserver `grep qa /etc/vpndnsutils.conf |awk  '{print $3}'` >> $VPN_FILE
 	cat $ORIGINAL_FILE >> $VPN_FILE
-	chmod 777 $VPN_FILE
 	if [[ "$file" =~ .*auth$ ]]; then
         echo "The file '$file' appeared in directory '$dir' via '$action'"
 	    CURRENT_LINK_TARGET=`readlink -f /etc/resolv.conf`
