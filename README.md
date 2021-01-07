@@ -1,7 +1,7 @@
 # vpndnsutils
 Developed for update resolv.conf link when connected to pritunl vpn client
 
-# for build [from a same level directory of the vpndnsutils]
+# for build [from git root directory]
 sudo dpkg-deb --build vpndnsutils
 
 # check service status
