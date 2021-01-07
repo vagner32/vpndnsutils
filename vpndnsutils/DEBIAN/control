@@ -1,6 +1,6 @@
 Package: vpndnsutils
 Version: 1.0
 Architecture: all
-Depends: inotify-tools
+Depends: inotify-tools, resolvconf
 Maintainer: Vagner Matos <vagner.matos@flipkick.cloud>
 Description: A simple util for change resolv.conf when connected to Printunl client VPN

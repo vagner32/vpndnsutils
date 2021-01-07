@@ -24,8 +24,8 @@ sleep 5
 systemctl start vpndnsutils
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}Service started successfuly.${NONE}"
-    sleep 5
+    sleep 3
 else
     echo -e "${RED}Error.${NONE}"
-    sleep 5
+    sleep 3
 fi

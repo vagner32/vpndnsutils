@@ -13,10 +13,10 @@ UNDERLINE='\033[4m'
 VPNTMPFILES=`ls /tmp/pritunl/ |wc -l`
 
 echo -e "${BOLD}${YELLOW}Checking if VPN is currently connected...${NONE}"
-sleep 5
+sleep 3
 if  [[ "$VPNTMPFILES" == "0" ]]; then
     echo -e "${GREEN}You are no connected to VPN this time, we'll go on...${NONE}"
-    sleep 5
+    sleep 3
 else
     echo -e "${RED}You are connected to VPN this time, please disconnect, then restart the installation.${NONE}"
     sleep 3
