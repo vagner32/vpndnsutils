@@ -1,2 +1,12 @@
 systemctl enable vpndnsutils
+
+echo -n "Please enter your QA DNS Server address? [e.g. 8.8.8.8] "
+read ip
+sed -i "s/qaip/$ip/g" /etc/vpndnsutils.conf
+
+echo -n "Please enter your PRD DNS Server address? [e.g. 8.8.8.8] "
+read ip
+sed -i "s/prdip/$ip/g" /etc/vpndnsutils.conf
+
+
 systemctl start vpndnsutils
