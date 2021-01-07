@@ -20,5 +20,5 @@ if  [[ "$VPNTMPFILES" == "0" ]]; then
 else
     echo -e "${RED}You are connected to VPN this time, please disconnect, then restart the installation.${NONE}"
     sleep 3
-    exit 0
+    exit 1
 fi
