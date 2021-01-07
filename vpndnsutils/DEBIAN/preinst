@@ -1,0 +1,24 @@
+#!/bin/bash
+
+NONE='\033[00m'
+RED='\033[01;31m'
+GREEN='\033[01;32m'
+YELLOW='\033[01;33m'
+PURPLE='\033[01;35m'
+CYAN='\033[01;36m'
+WHITE='\033[01;37m'
+BOLD='\033[1m'
+UNDERLINE='\033[4m'
+
+VPNTMPFILES=`ls /tmp/pritunl/ |wc -l`
+
+echo -e "${BOLD}${YELLOW}Checking if VPN is currently connected...${NONE}"
+sleep 5
+if  [[ "$VPNTMPFILES" == "0" ]]; then
+    echo -e "${GREEN}You are no connected to VPN this time, we'll go on...${NONE}"
+    sleep 5
+else
+    echo -e "${RED}You are connected to VPN this time, please disconnect, then restart the installation.${NONE}"
+    sleep 3
+    exit 0
+fi
