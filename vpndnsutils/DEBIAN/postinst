@@ -21,8 +21,6 @@ read ip
 sed -i "s/prdip/$ip/g" /etc/vpndnsutils.conf
 
 systemctl start vpndnsutils
-sleep 5
-
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}Service started successfuly.${NONE}"
     sleep 5
