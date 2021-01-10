@@ -12,15 +12,15 @@ UNDERLINE='\033[4m'
 
 systemctl enable vpndnsutils
 
-echo -n -e "${BOLD}${PURPLE}Please enter your QA DNS Server address? ${CYAN}[e.g. 8.8.8.8]${NONE} \n"
-read ip
-sed -i "s/qaip/$ip/g" /etc/vpndnsutils.conf
+#echo -n -e "${BOLD}${PURPLE}Please enter your QA DNS Server address? ${CYAN}[e.g. 8.8.8.8]${NONE} \n"
+#read ip
+#sed -i "s/qaip/$ip/g" /etc/vpndnsutils.conf
 
-echo -n -e "${BOLD}${PURPLE}Please enter your PRD DNS Server address? ${CYAN}[e.g. 8.8.8.8]${NONE} \n"
-read ip
-sed -i "s/prdip/$ip/g" /etc/vpndnsutils.conf
+#echo -n -e "${BOLD}${PURPLE}Please enter your PRD DNS Server address? ${CYAN}[e.g. 8.8.8.8]${NONE} \n"
+#read ip
+#sed -i "s/prdip/$ip/g" /etc/vpndnsutils.conf
 
-sleep 5
+#sleep 5
 systemctl start vpndnsutils
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}Service started successfuly.${NONE}"
